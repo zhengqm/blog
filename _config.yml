@@ -19,7 +19,8 @@ show_post_footers:  false
 disqus_shortname:
 
 # Social icons
-show_social_icons: false
+show_social_icons: true
+weibo_id:          2172274364
 github_username:
 stackoverflow_id:
 twitter_username:
