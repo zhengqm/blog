@@ -6,11 +6,11 @@ summary:    今天我使用 Meteor 搭建了一个简单的即时搜索工具，
 categories: Code
 ---
 
-
+![](/images/meteor-logo.png)
 
 ## Introduction
 
-#### 1. Background
+### 1. Background
 
 我所在的小组的研究领域是软件开发数据挖掘，在各种的软件开发数据中，最基础且最重要的数据是软件项目的代码库，其中包含了项目的所有代码文件、代码的所有版本、代码提交者的想关信息。我们小组从互联网的各大开源社区、代码托管网站爬取了超过20万个软件项目的代码库，其中既包含 Apache 、 Mozilla 这种大型社区中的项目，也包含托管于 Github 、 Bitbucket 等网站上的大大小小的项目。在此基础上，小组的师兄们对这些项目的元信息进行了抽取，并将其存储于 Mongodb 中，对于一个项目我们存储了项目的:
 
@@ -45,12 +45,12 @@ categories: Code
 
 然而尽管我们有了大量数据，也提取了这些数据的元信息，但是这些数据一直静静的躺在服务器的磁盘上，并没有被很好利用。其中一个重要的原因是我们缺少一个方便好用的搜索工具对数据进行探索。
 
-#### 2. Instant Search
+### 2. Instant Search
 
 而所谓即时搜索(Instant search)，就是在使用者键入关键字的同时即时返回搜索结果，最为常见的例子自然是 [Google](https://www.google.com/) 和[百度](https://www.baidu.com/)了。
 
 
-#### 3. Goal
+### 3. Goal
 
 今天我将要完成的目标是基于实验室存储于 Mongodb 的代码项目元数据，实现一个能够帮小组成员搜索数据的工具，它能够支持：
 
@@ -58,9 +58,7 @@ categories: Code
 + 支持关键字的正则匹配
 + 支持条件搜索
 
-## Meteor
-
-Meteor是...
+### 4. Meteor
 
 引自[官网](https://www.meteor.com/):
 >Meteor is a complete open source platform
@@ -74,7 +72,7 @@ in pure JavaScript.
 
 ## In Action
 
-#### 1. Back End
+### 1. Back End
 
 在后端中，我们首先获取 Mongodb 中存储元数据的 collection:
 
@@ -148,7 +146,7 @@ function query(collections, queryString){
 }
 ```
 
-而其中的 `parseSpecial` 函数实现了我们想提供的条件搜索功能：
+而其中的 `parseSpecial` 函数实现了我们想提供的条件搜索功能，若包含特殊操作符，则构造搜索特殊搜索条件，否则使用对项目名称进行正则匹配：
 
 ```javascript
 // should be DRYer
@@ -179,21 +177,21 @@ function parseSpecial(str){
 至此，后端的所有功能已经全部完成。
 
 
-#### 2. Front End
+### 2. Front End
 
 在前端中，我们需要一个模板对数据进行展示：
 
 ```html
 <template name="item">
     <dl class="dl-horizontal">
-    <dt>Project</dt>            <dd>{{prj}}</dd>
-    <dt>Repository</dt>         <dd>{{repo}}</dd>
-    <dt>Time Span</dt>          <dd>{{b_time}} - {{e_time}}</dd>
-    <dt>Version Control</dt>    <dd>{{vcs}}</dd>
-    <dt># Commit</dt>           <dd>{{n_cmt}}</dd>
-    <dt># People</dt>           <dd>{{n_peo}}</dd>
-    <dt>Source Location</dt>    <dd>{{src_loc}}</dd>
-    <dt>Log Location</dt>       <dd>{{log_loc}}</dd>
+    <dt>Project</dt>            <dd>{% raw %}{{prj}}{% endraw %}</dd>
+    <dt>Repository</dt>         <dd>{% raw %}{{repo}}{% endraw %}</dd>
+    <dt>Time Span</dt>          <dd>{% raw %}{{b_time}} - {{e_time}}{% endraw %}</dd>
+    <dt>Version Control</dt>    <dd>{% raw %}{{vcs}}{% endraw %}</dd>
+    <dt># Commit</dt>           <dd>{% raw %}{{n_cmt}}{% endraw %}</dd>
+    <dt># People</dt>           <dd>{% raw %}{{n_peo}}{% endraw %}</dd>
+    <dt>Source Location</dt>    <dd>{% raw %}{{src_loc}}{% endraw %}</dd>
+    <dt>Log Location</dt>       <dd>{% raw %}{{log_loc}}{% endraw %}</dd>
     <hr>
     </dl>
 </template>
