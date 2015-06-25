@@ -6,7 +6,6 @@ summary:    今天我使用 Meteor 搭建了一个简单的即时搜索工具，
 categories: Code
 ---
 
-![](/images/meteor-logo.png)
 
 ## Introduction
 
@@ -71,6 +70,8 @@ in pure JavaScript.
 接下来我们开始基于 Meteor 实现上文介绍的即时搜索工具。
 
 ## In Action
+
+![](/images/meteor-logo.png)
 
 ### 1. Back End
 
