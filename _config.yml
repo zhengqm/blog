@@ -9,6 +9,8 @@ url:         "http://zhengqm.github.io"
 # Google analytics
 google_analytics: UA-64116908-1
 
+excerpt_separator: ""
+
 # Optional features
 animated:           false
 show_related_posts: false
@@ -50,6 +52,6 @@ markdown:     redcarpet
 redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
 permalink:    pretty
-paginate:     3
+paginate:     5
 sass:
   compressed: true
