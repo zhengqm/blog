@@ -17,7 +17,7 @@ categories: Code
 
 ### 工具demo
 
-这个demo在ipython下展示工具的使用，项目名称为[Song Finder](),其索引、搜索功能全部封装在`SFEngine`中。首先是简单的准备工作：
+这个demo在ipython下展示工具的使用，项目名称为[Song Finder](https://github.com/zhengqm/SongFinder),其索引、搜索功能全部封装在`SFEngine`中。首先是简单的准备工作：
 
 ``` python
 In [1]: from SFEngine import *
