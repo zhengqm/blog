@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      90行python搭一个音乐搜索工具
+title:      90行python搭一个音乐搜索工具 —— Song Finder
 date:       2015-07-23
 summary:    这两天基于python及scipy搭建了一个简单的音乐（音频）搜索工具，能够根据音乐片段对曲库进行检索，并在嘈杂环境中经受住了考验。
 categories: Code
@@ -17,7 +17,7 @@ categories: Code
 
 ### 工具demo
 
-这个demo在ipython下展示工具的使用，项目名称为[Song Finder](https://github.com/zhengqm/SongFinder),其索引、搜索功能全部封装在`SFEngine`中。首先是简单的准备工作：
+这个demo在ipython下展示工具的使用，本项目名称为[Song Finder](https://github.com/zhengqm/SongFinder),我把索引、搜索的功能全部封装在[Song Finder](https://github.com/zhengqm/SongFinder)中的`SFEngine`中。首先是简单的准备工作：
 
 ``` python
 In [1]: from SFEngine import *
@@ -72,7 +72,7 @@ original/光良 - 童话 69
 项目主页： [Github](https://github.com/zhengqm/SongFinder)
 
 
-### 工具原理
+### Song Finder原理
 
 给定曲库对一个录音片段进行检索是一个不折不扣的搜索问题，但是对音频的搜索并不像对文档、数据的搜索那么直接。为了完成对音乐的搜索，工具需要完成下列3个任务：
 
