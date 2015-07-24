@@ -8,12 +8,8 @@ categories: Code
 
 ![](/images/music.jpg)
 
-之前一段时间读到了[这篇博客](http://www.redcode.nl/blog/2010/06/creating-shazam-in-java/)，其中描述了作者如何用java实现国外著名音乐搜索工具[shazam](http://www.shazam.com/music/web/home.html)的基本功能。其中所提到的文章又将我引向了[关于shazam的一篇论文](http://www.ee.columbia.edu/~dpwe/papers/Wang03-shazam.pdf)及[另外一篇博客](https://laplacian.wordpress.com/2009/01/10/how-shazam-works/)。读完之后发现其中的原理并不十分复杂，但是方法对噪音的健壮性却非常好，出于好奇决定自己用python自己实现了一个简单的音乐搜索工具。
+之前一段时间读到了[这篇博客](http://www.redcode.nl/blog/2010/06/creating-shazam-in-java/)，其中描述了作者如何用java实现国外著名音乐搜索工具[shazam](http://www.shazam.com/music/web/home.html)的基本功能。其中所提到的文章又将我引向了[关于shazam的一篇论文](http://www.ee.columbia.edu/~dpwe/papers/Wang03-shazam.pdf)及[另外一篇博客](https://laplacian.wordpress.com/2009/01/10/how-shazam-works/)。读完之后发现其中的原理并不十分复杂，但是方法对噪音的健壮性却非常好，出于好奇决定自己用python自己实现了一个简单的音乐搜索工具—— Song Finder, 它的核心功能被封装在 `SFEngine` 中，第三方依赖方面只使用到了 `scipy`。
 
-
-### 关于shazam
-
-[Shazam](http://www.shazam.com/music/web/home.html)是国外的一个音乐搜索、匹配服务，用户可以向shazam提交一段音乐、歌曲片段，服务将返回该片段所对应的音乐、歌曲名称。
 
 ### 工具demo
 
