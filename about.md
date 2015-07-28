@@ -10,4 +10,4 @@ permalink: /about/
 
 正在寻找在北京/深圳的实习机会。
 
-![](/images/cha.png)
+<img src ="/images/cha.png"  height="350">
