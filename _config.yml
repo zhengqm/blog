@@ -1,8 +1,9 @@
 # Site settings
 title:       Qimu's Code and Life | 郑淇木的代码及日常
 email:       zheng.qm@163.com
-author:      郑淇木 / Qimu Zheng
-description: "郑淇木的代码及日常"
+author_en:      Qimu Zheng
+author_cn:      郑淇木
+description: "郑淇木的博客  Qimu Zheng's Blog"
 baseurl:     ""
 url:         "http://zhengqm.github.io"
 
@@ -23,10 +24,10 @@ disqus_shortname: qimublog
 # Social icons
 show_social_icons: true
 weibo_id:          2172274364
-github_username:
+github_username:   zhengqm
 stackoverflow_id:
-twitter_username:
-google_plus_id:
+twitter_username:  zheng_qm
+google_plus_id:   108253816766257280739
 linkedin_username:
 angellist_username:
 bitcoin_url:
