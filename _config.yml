@@ -7,7 +7,8 @@ description: "郑淇木的博客  Qimu Zheng's Blog"
 baseurl:     ""
 url:         "http://zhengqm.github.io"
 
-
+gems: [jekyll-paginate]
+encoding: utf-8
 # Google analytics
 google_analytics: UA-64116908-1
 
@@ -50,9 +51,7 @@ share_stumbleupon: false
 share_hackernews: false
 
 # Build settings
-markdown:     redcarpet
-redcarpet:
-  extensions: ['smart', 'tables', 'with_toc_data']
+markdown:     kramdown
 permalink:    pretty
 paginate:     5
 sass:
