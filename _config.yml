@@ -5,7 +5,7 @@ author_en:      Qimu Zheng
 author_cn:      郑淇木
 description: "郑淇木的博客  Qimu Zheng's Blog"
 baseurl:     ""
-url:         "http://zhengqm.github.io"
+url:         "https://zhengqm.github.io"
 
 gems: [jekyll-paginate]
 encoding: utf-8
