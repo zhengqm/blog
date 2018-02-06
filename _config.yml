@@ -15,9 +15,10 @@ google_analytics: UA-64116908-1
 excerpt_separator: ""
 
 # Optional features
-animated:           false
+animated:           true
 show_related_posts: false
 show_post_footers:  false
+
 
 # Disqus post comments
 # (leave blank to disable Disqus)
@@ -49,6 +50,7 @@ share_tumblr: false
 share_reddit: false
 share_stumbleupon: false
 share_hackernews: false
+
 
 # Build settings
 markdown:     kramdown
