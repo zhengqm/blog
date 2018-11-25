@@ -79,11 +79,12 @@ CUDA编程中的常见流程是：
 + 启动kernel
 + 把运算结果从GPU搬运回CPU中
 
-接下来我们以`samples`中的`vectorAdd`为例，说明这一流程：
+Cuda样例代码中的`vectorAdd`完成的任务是对长为`numElements`的两个数组`h_A`、`h_B`进行对应元素加合，并将结果存入`h_C`中。接下来我们以`vectorAdd`为例，说明这一流程：
 
 + 首先是把CPU数据搬运到GPU中
 ```
 cudaMemcpy(d_A, h_A, size, cudaMemcpyHostToDevice);
+cudaMemcpy(d_B, h_B, size, cudaMemcpyHostToDevice);
 ```
 
 + 然后我们定义我们的加合计算
@@ -99,21 +100,19 @@ vectorAdd(const float *A, const float *B, float *C, int numElements)
     }
 }
 ```
-做的事情就是每个thread负责根据自己所在的thread block及threadIdx计算出自己对应的数组下标，并对这一下标对应的元素完成一次加合计算。
+做的事情就是每个thread负责根据自己所在的thread block及threadIdx计算出自己所应处理的数组下标，并对这一下标对应的元素完成一次加合计算。
 
-+ 接下来我们启动kernel，其中`<<<blocksPerGrid, threadsPerBlock>>>`表示我们需要`blocksPerGrid`个thread block，这个thread block中包含`threadsPerBlock`个thread.
-
++ 接下来我们启动kernel，其中`<<<blocksPerGrid, threadsPerBlock>>>`指定了thread block数量及每个block中的thread数量。
 ```
 vectorAdd<<<blocksPerGrid, threadsPerBlock>>>(d_A, d_B, d_C, numElements);
 ```
 
 + 最后我们把运算结果搬运回CPU中。
-
 ```
 cudaMemcpy(h_C, d_C, size, cudaMemcpyDeviceToHost);
 ```
 
-一个cuda程序最重要的部分就完成了。完整代码中还包含了内存的分配、cuda调用的错误检查，完整代码可见cuda安装目录下的`samples/0_Simple/vectorAdd`。
+一个cuda程序最重要的部分就完成了。完整代码中还包含了内存的分配、cuda调用的错误检查等内容，完整代码可见cuda安装目录下的`samples/0_Simple/vectorAdd`。
 
 ## 一些需要留意的地方
 
