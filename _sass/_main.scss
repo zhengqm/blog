@@ -488,11 +488,23 @@ h6,
 
 .share-page {
   font-size:  0.65em;  
-  padding: 2em 0 0 0;
+  border: 1px solid #444444;
+  border-radius: 10px; 
+  padding: 1em 0em 1em 1em;
 }
 
 .share-page div {
-  font-size: 1.3em;
+  font-size: 1.0em;
+}
+
+.share-page a.fa {
+    padding: 0.2em;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.share-page a.fa:hover {
+    opacity: 1;
 }
 
 footer {

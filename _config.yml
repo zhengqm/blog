@@ -22,7 +22,7 @@ show_post_footers:  false
 
 # Disqus post comments
 # (leave blank to disable Disqus)
-disqus_shortname: qimublog
+#disqus_shortname: qimublog
 
 # Social icons
 show_social_icons: true
@@ -38,11 +38,11 @@ paypal_url:
 flattr_button:
 
 # Post sharing icons
-show_sharing_icons: false
-share_text: 'Share this post!'
+show_sharing_icons: true
+share_text: '分享到：'
 # Change to 'true' to enable individual icons
-share_facebook: false
-share_twitter: false
+share_facebook: true
+share_twitter: true
 share_googleplus: false
 share_linkedin: false
 share_digg: false
@@ -50,11 +50,12 @@ share_tumblr: false
 share_reddit: false
 share_stumbleupon: false
 share_hackernews: false
+share_weibo: true
 
 
 # Build settings
 markdown:     kramdown
 permalink:    pretty
-paginate:     5
+paginate:     8
 sass:
   compressed: true

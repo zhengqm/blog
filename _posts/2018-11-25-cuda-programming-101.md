@@ -6,6 +6,11 @@ summary:    Cuda编程基本概念&编程模型
 categories: Code
 ---
 
+系列文章：
++ [Cuda编程101](/code/2018/11/25/cuda-programming-101/)：Cuda编程的基本概念及编程模型
++ [Cuda编程102](/code/2018/12/02/cuda-programming-102/)：Cuda程序性能相关话题
++ [Cuda编程103](/code/2018/12/09/cuda-programming-103/)：Cuda多卡编程
++ [Cuda tips](/code/2018/12/07/cuda-nvcc-tips/): nvcc的`-code`、`-arch`、`-gencode`选项
 
 ## 基本想法
 
