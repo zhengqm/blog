@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      打脸向的创业思考《重来》
+title:      打脸向的创业思考－读《重来》
 date:       2018-01-18
 summary:    创业过程中如何打破常规，狠狠打脸。
 categories: Life
